@@ -1,7 +1,5 @@
-apply from: './dependencies.gradle'
 
 buildscript {
-  apply from: './dependencies.gradle'
 
   repositories {
     google()
@@ -9,10 +7,9 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:' + versions.gradlePlugin
-    classpath "com.diffplug.spotless:spotless-plugin-gradle:" + versions.spotlessPlugin
-    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:' + versions.kotlin
-    classpath 'com.vanniktech:gradle-maven-publish-plugin:' + versions.mavenPublishPlugin
+    classpath 'com.android.tools.build:gradle:7.0.4'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
+
   }
 }
 

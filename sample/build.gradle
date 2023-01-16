@@ -1,13 +1,11 @@
-apply from: '../dependencies.gradle'
-
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
 android {
-  compileSdkVersion versions.compileSdk
-  buildToolsVersion versions.buildTools
+  compileSdkVersion 33
+  buildToolsVersion "30.0.3"
 
   compileOptions {
     sourceCompatibility 1.8
@@ -16,20 +14,19 @@ android {
 
   defaultConfig {
     applicationId "com.cottacush.android.currencyedittext"
-    minSdkVersion versions.minSdk
-    targetSdkVersion versions.compileSdk
-    versionCode versions.publishVersionCode
-    versionName versions.publishVersion
+    minSdkVersion 24
+    targetSdkVersion 33
+    versionCode 5
+    versionName "1.0.5"
   }
 }
 
 dependencies {
   implementation project(':library')
-  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:' + versions.kotlin
-  implementation 'androidx.core:core-ktx:' + versions.ktx
-  implementation 'com.google.android.material:material:' + versions.material
-  implementation 'androidx.appcompat:appcompat:' + versions.androidx
-  implementation 'com.android.support.constraint:constraint-layout:' + versions.constraintLayout
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20'
+  implementation 'androidx.core:core-ktx:1.7.0'
+  implementation 'com.google.android.material:material:1.0.0'
+  implementation 'androidx.appcompat:appcompat:1.0.0'
+  implementation 'com.android.support.constraint:constraint-layout:1.0.0'
 }
 
-apply from: '../spotless.gradle'
